@@ -30,9 +30,66 @@ const convertButton = document.getElementById('convertButton');
         
         // Logic for conversion direction
         if (conversionDirection === 'metricToImperial') {
-            
+            switch (conversionType) {
+                case 'inchesToCentimeters' :
+                    result = inputValue * inchesToCentimeters;
+                    break;
+                case 'feetToMeters' :
+                    result = inputValue * feetToMeters;
+                    break;
+                case 'milesToKilometers' :
+                    result = inputValue * milesToKilometers;
+                    break;
+                case 'ouncesToGrams' :
+                    result = inputValue * ouncesToGrams;
+                    break;
+                case 'poundsToKilograms' : 
+                    result = inputValue * poundsToKilograms;
+                    break;
+                case 'fluidOuncesToMilliliters' :
+                    result = inputValue * fluidOuncesToMilliliters;
+                    break;
+                case 'gallonsToLiters' :
+                    result = inputValue * gallonsToLiters;
+                    break;
+                case 'fahrenheitToCelsius' :
+                    result = fahrenheitToCelsius(inputValue);
+                    break;
+                default:
+                    result = 'Invalid Conversion Type';
+                    break;
+            };
         } else {
-            
+            // Imperial to Metric Conversions
+            switch(conversionType) {
+                case 'centimetersToinches' :
+                    result = inputValue / inchesToCentimeters;
+                    break;
+                case 'metersToFeet' :
+                    result = inputValue / feetToMeters;
+                    break;
+                case 'kilometersToMiles' :
+                    result = inputValue / milesToKilometers;
+                    break;
+                case 'gramsToOunces' :
+                    result = inputValue / ouncesToGrams;
+                    break;
+                case 'kilogramsToPounds' :
+                    result = inputValue / poundsToKilograms;
+                    break;
+                case 'millilitersToFluidOunces' :
+                    result = inputValue / fluidOuncesToMilliliters;
+                    break;
+                case 'litersToGallons' :
+                    result = inputValue / gallonsToLiters;
+                    break;
+                case 'celsiusToFahrenheit' :
+                    result = (inputValue * 9 / 5) + 32;
+                    break;
+                default :
+                    result = 'Invalid Conversion Type';
+                    break;
+            };
         };
 
         // Displaying results 
