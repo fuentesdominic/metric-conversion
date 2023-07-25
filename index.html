@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlocking the Metric World!</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Unlocking the Metric World!</title>
 </head>
 <body>
+    <h1>Unlocking the Metric System!</h1>
+
+    <h3>The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly converts units between metric and imperial measurements. Enter values in the metric system and get instant conversions in the imperial system, or vice versa. Simple and convenient!</h3>
+    
+    <label for="conversionType">Select Conversion Type:</label>
+    <select>
+        <!-- <option selected disabled>Select: Metric System</option> -->
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </select>
+
+    <br>
+
+    <label for="conversionDirection">Select Conversion Direction:</label>
+    <select id="conversionDirection-select">
+        <option disabled selected>Select</option>
+        <option value="metricToImperial">Metric to Imperial</option>
+        <option value="imperialToMetric">Imperial to Metric</option>
+    </select>
+
+    <br>
+
+    <label for="inputValue">Enter Value:</label>
+    <input type="number" id="inputValue" placeholder="Enter the value">
+
+    <button id="convertButton">Convert</button>
+
+    <p id="result"></p>
     <!-- select & options for imperial system -->
     <!-- select & options for metric system  -->
     <!-- add logic for button  -->
 </body>
 </html>
-
-
-   
-
 
 <!-- content for the select options -->
 
