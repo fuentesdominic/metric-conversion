@@ -20,7 +20,7 @@ const convertButton = document.getElementById('convertButton');
 
         // Gathering user input
         const conversionType = document.getElementById('conversionType').value;
-        const conversionDirection = document.getElementById('conversionDirection').value;
+        const conversionDirection = document.getElementById('conversionDirection-select').value;
 
         // Using parseFloat to ensure the users input is treated as a number
         // Allows us to preform mathematical calculations correctly  
@@ -58,7 +58,7 @@ const convertButton = document.getElementById('convertButton');
                 default:
                     result = 'Invalid Conversion Type';
                     break;
-            };
+            }
         } else {
             // Imperial to Metric Conversions
             switch(conversionType) {

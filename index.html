@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Unlocking the Metric World!</title>
 </head>
@@ -13,7 +13,7 @@
     <h3>The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly converts units between metric and imperial measurements. Enter values in the metric system and get instant conversions in the imperial system, or vice versa. Simple and convenient!</h3>
     
     <label for="conversionType">Select Conversion Type:</label>
-    <select>
+    <select id="conversionType">
             <option selected disabled>Select</option>
 
         <optgroup label="Length">
@@ -40,7 +40,7 @@
 
     <br>
 
-    <label for="conversionDirection">Select Conversion Direction:</label>
+    <label for="conversionDirection-select">Select Conversion Direction:</label>
     <select id="conversionDirection-select">
         <option disabled selected>Select</option>
         <option value="metricToImperial">Metric to Imperial</option>
@@ -54,29 +54,6 @@
 
     <button id="convertButton">Convert</button>
 
-    <p id="result"></p>
-    <!-- select & options for imperial system -->
-    <!-- select & options for metric system  -->
-    <!-- add logic for button  -->
+    <p id="result">Conversion result will appear here</p>
 </body>
 </html>
-
-<!-- content for the select options -->
-
-<!-- length -->
-<!-- inches to centimeters -->
-<!-- feet to meters -->
-<!-- miles to kilometers  -->
-
-<!-- weight -->
-<!-- ounces to grams -->
-<!-- pounds to kilometers  -->
-
-<!-- volume -->
-<!-- Fluid ounces to milliliters -->
-<!-- cups to milliliters -->
-<!-- pints to liters -->
-<!-- gallons to liters -->
-
-<!-- temperature -->
-<!-- fahrenheit to celsius -->
