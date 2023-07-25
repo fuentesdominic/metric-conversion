@@ -14,15 +14,28 @@
     
     <label for="conversionType">Select Conversion Type:</label>
     <select>
-        <!-- <option selected disabled>Select: Metric System</option> -->
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+            <option selected disabled>Select</option>
+
+        <optgroup label="Length">
+            <option value="inchesToCentimeters">Inches / Centimeters</option>
+            <option value="feetToMeters">Feet / Meters</option>
+            <option value="milesToKilometers">Miles / Kilometers</option>
+        </optgroup>
+
+        <optgroup label="Weight">
+            <option value="ouncesToGrams">Ounces / Grams</option>
+            <option value="poundsToKilograms">Pounds / Kilograms</option>
+        </optgroup>
+
+        <optgroup label="Volume">
+            <option value="fluidOuncesToMilliliters">Fluid Ounces / Milliliters</option>
+            <option value="gallonsToLiters">Gallons / Liters</option>
+        </optgroup>
+        
+        <optgroup label="Temperature">
+            <option value="fahrenheitToCelsius">Fahrenheit / Celsius</option>
+        </optgroup>
+
     </select>
 
     <br>
