@@ -14,7 +14,7 @@
     
     <label for="metricConversion">Metric to Imperial Conversion:</label>
     <select id="metricConversion">
-            <option selected disabled>Select</option>
+                <option selected disabled>Select</option>
 
             <optgroup label="Metric to Imperial">
             <optgroup label="Length">
@@ -37,9 +37,18 @@
 
     </select>
 
+    <label for="inputValue-M2I">Enter Value:</label>
+    <input type="number" id="inputValue-M2I" placeholder="Enter the value">
+
+    <button id="convertButton-M2I">Convert</button>
+
+    <p id="result-M2I"></p>
+
 
     <label for="imperialConversion">Imperial to Metirc Conversion:</label>
     <select id="imperialConversion">
+            <option selected disabled>Select</option>
+
         <optgroup label="Imperial To Metric">
         <optgroup label="Length">
             <option value="centimetersToinches">Centimeters To Feet</option>
@@ -61,24 +70,23 @@
 
     </select>
 
+    <label for="inputValue-I2M">Enter Value:</label>
+    <input type="number" id="inputValue-I2M" placeholder="Enter the value">
     
+    <button id="convertButton-I2M">Convert</button>
 
-    <br>
+    <p id="result-I2M"></p>
+
+    <!-- <br>
 
     <label for="conversionDirection-select">Select Conversion Direction:</label>
     <select id="conversionDirection-select">
         <option disabled selected>Select</option>
         <option value="metricToImperial">Metric to Imperial</option>
         <option value="imperialToMetric">Imperial to Metric</option>
-    </select>
+    </select> -->
 
     <br>
 
-    <label for="inputValue">Enter Value:</label>
-    <input type="number" id="inputValue" placeholder="Enter the value">
-
-    <button id="convertButton">Convert</button>
-
-    <p id="result">Conversion result will appear here</p>
 </body>
 </html>
