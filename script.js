@@ -13,6 +13,7 @@
 
     // Temperature Conversions
     const fahrenheitToCelsius = (fahrenheit) => (fahrenheit - 32) * (5 / 9);
+    
 
 // setting up callback function for button
 const convertButton_M2I = document.getElementById('convertButton-M2I');

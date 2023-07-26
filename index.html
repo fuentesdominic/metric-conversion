@@ -8,10 +8,15 @@
     <title>Unlocking the Metric World!</title>
 </head>
 <body>
-    <h1>Unlocking the Metric System!</h1>
+    <div class="entirePage-div">
+    <h1 class="title">Unlocking the Metric System!</h1>
 
-    <h3>The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly converts units between metric and imperial measurements. Enter values in the metric system and get instant conversions in the imperial system, or vice versa. Simple and convenient!</h3>
+    <h3 class="description">The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly converts units between metric and imperial measurements. Enter values in the metric system and get instant conversions in the imperial system, or vice versa. Simple and convenient!</h3>
     
+    <div class="conversion-container">
+
+    <div class="metricConversion-div">
+    <div class="info-container-M2I">
     <label for="metricConversion">Metric to Imperial Conversion:</label>
     <select id="metricConversion">
                 <option selected disabled>Select</option>
@@ -36,15 +41,20 @@
         </optgroup>
 
     </select>
+    </div>
 
+    <div class="info-container-M2I">
     <label for="inputValue-M2I">Enter Value:</label>
     <input type="number" id="inputValue-M2I" placeholder="Enter the value">
+    </div>
 
     <button id="convertButton-M2I">Convert</button>
 
     <p id="result-M2I"></p>
+    </div>
 
-
+    <div class="imperialConversion-div">
+    <div class="info-container-I2M">
     <label for="imperialConversion">Imperial to Metirc Conversion:</label>
     <select id="imperialConversion">
             <option selected disabled>Select</option>
@@ -69,24 +79,18 @@
         </optgroup>
 
     </select>
+    </div>
 
+    <div class="info-container-I2M">
     <label for="inputValue-I2M">Enter Value:</label>
     <input type="number" id="inputValue-I2M" placeholder="Enter the value">
+    </div>
     
     <button id="convertButton-I2M">Convert</button>
 
     <p id="result-I2M"></p>
-
-    <!-- <br>
-
-    <label for="conversionDirection-select">Select Conversion Direction:</label>
-    <select id="conversionDirection-select">
-        <option disabled selected>Select</option>
-        <option value="metricToImperial">Metric to Imperial</option>
-        <option value="imperialToMetric">Imperial to Metric</option>
-    </select> -->
-
-    <br>
-
+    </div>
+    </div>
+    </div>
 </body>
 </html>

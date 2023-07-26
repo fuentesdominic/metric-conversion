@@ -1,0 +1,100 @@
+/* stlying for beginning text  */
+.entirePage-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #8E24AA, #2196F3);
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 2rem;
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.conversion-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* stlying for metric to imperial */
+.metricConversion-div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.info-container-M2I {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+#convertButton-M2I {
+    margin: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#convertButton-M2I:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+}
+
+/* styling for imperial to metric */
+.imperialConversion-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+}
+
+.info-container-I2M {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+#convertButton-I2M {
+    margin: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#convertButton-I2M:hover {
+    background-color: #388E3C;
+    transform: scale(1.1);
+}
