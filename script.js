@@ -19,9 +19,10 @@ const convertButton = document.getElementById('convertButton');
     convertButton.addEventListener('click', () => {
 
         // Gathering user input
-        const conversionType = document.getElementById('conversionType').value;
-        const conversionDirection = document.getElementById('conversionDirection-select').value;
-
+        // const conversionType = document.getElementById('conversionType').value;
+        // const conversionDirection = document.getElementById('conversionDirection-select').value;
+        const metricConversion = document.getElementById('metricConversion').value;
+        const imperialConversion = document.getElementById('imperialConversion').value;
         // Using parseFloat to ensure the users input is treated as a number
         // Allows us to preform mathematical calculations correctly  
         const inputValue = parseFloat(document.getElementById('inputValue').value);
@@ -29,8 +30,8 @@ const convertButton = document.getElementById('convertButton');
         let result;
         
         // Logic for conversion direction
-        if (conversionDirection === 'metricToImperial') {
-            switch (conversionType) {
+        if (metricConversion !== 'metricConversion' && imperialConversion === 'imperialConversion') {
+            switch (metricConversion) {
                 case 'inchesToCentimeters' :
                     result = inputValue * inchesToCentimeters;
                     break;
@@ -59,9 +60,9 @@ const convertButton = document.getElementById('convertButton');
                     result = 'Invalid Conversion Type';
                     break;
             }
-        } else if(conversionType === 'imperialToMetric') {
+        } else if (imperialConversion !== 'imperialConversion' && metricConversion === 'metricConversion') {
             // Imperial to Metric Conversions
-            switch(conversionType) {
+            switch(imperialConversion) {
                 case 'centimetersToinches' :
                     result = inputValue / inchesToCentimeters;
                     break;
@@ -89,8 +90,10 @@ const convertButton = document.getElementById('convertButton');
                 default :
                     result = 'Invalid Conversion Type';
                     break;
-            };
-        };
+            }
+        } else {
+            result = 'Please select either Metric to Imperial or Imperial to Metric conversion.';
+        }
 
         // Displaying results 
         if (typeof result !== 'number') {
@@ -102,3 +105,7 @@ const convertButton = document.getElementById('convertButton');
         };
     
     });
+
+// check why nothing is being displayed when trying to convert.
+
+// see if you can make two seperate switch functions, one for each options and have a button and result text for each selection?
