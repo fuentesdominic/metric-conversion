@@ -59,7 +59,7 @@ const convertButton = document.getElementById('convertButton');
                     result = 'Invalid Conversion Type';
                     break;
             }
-        } else {
+        } else if(conversionType === 'imperialToMetric') {
             // Imperial to Metric Conversions
             switch(conversionType) {
                 case 'centimetersToinches' :
@@ -93,9 +93,12 @@ const convertButton = document.getElementById('convertButton');
         };
 
         // Displaying results 
-        // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
-        document.getElementById('result').textContent = result.toFixed(2)
+        if (typeof result !== 'number') {
+            // handle case where the conversion type is not recongized
+            document.getElementById('result').textContent = result;
+        } else {
+            // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
+            document.getElementById('result').textContent = result.toFixed(2);
+        };
     
     });
-
-

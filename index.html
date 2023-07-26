@@ -16,27 +16,52 @@
     <select id="conversionType">
             <option selected disabled>Select</option>
 
-        <optgroup label="Length">
-            <option value="inchesToCentimeters">Inches / Centimeters</option>
-            <option value="feetToMeters">Feet / Meters</option>
-            <option value="milesToKilometers">Miles / Kilometers</option>
+            <optgroup label="Metric to Imperial">
+            <optgroup label="Length">
+                <option value="inchesToCentimeters">Inches To Centimeters</option>
+                <option value="feetToMeters">Feet To Meters</option>
+                <option value="milesToKilometers">Miles To Kilometers</option>
+            </optgroup>
+            <optgroup label="Weight">
+                <option value="ouncesToGrams">Ounces To Grams</option>
+                <option value="poundsToKilograms">Pounds To Kilograms</option>
+            </optgroup>
+            <optgroup label="Volume">
+                <option value="fluidOuncesToMilliliters">Fluid Ounces To Milliliters</option>
+                <option value="gallonsToLiters">Gallons To Liters</option>
+            </optgroup>
+            <optgroup label="Temperature">
+                <option value="fahrenheitToCelsius">Fahrenheit To Celsius</option>
         </optgroup>
-
-        <optgroup label="Weight">
-            <option value="ouncesToGrams">Ounces / Grams</option>
-            <option value="poundsToKilograms">Pounds / Kilograms</option>
-        </optgroup>
-
-        <optgroup label="Volume">
-            <option value="fluidOuncesToMilliliters">Fluid Ounces / Milliliters</option>
-            <option value="gallonsToLiters">Gallons / Liters</option>
-        </optgroup>
-        
-        <optgroup label="Temperature">
-            <option value="fahrenheitToCelsius">Fahrenheit / Celsius</option>
         </optgroup>
 
     </select>
+
+
+    <label for="imperialConversion">Imperial to Metirc Conversion:</label>
+    <select id="imperialConversion">
+        <optgroup label="Imperial To Metric">
+        <optgroup label="Length">
+            <option value="centimetersToinches">Centimeters To Feet</option>
+            <option value="metersToFeet">Meters To Feet</option>
+            <option value="kilometersToMiles">Kilometers To Miles</option>
+        </optgroup>
+        <optgroup label="Weight">
+            <option value="gramsToOunces">Grams To Ounces</option>
+            <option value="kilogramsToPounds">Kilograms to Pounds</option>
+        </optgroup>
+        <optgroup label="Volume">
+            <option value="millilitersToFluidOunces">Milliliters to Fluid Ounces</option>
+            <option value="litersToGallons">Liters to Gallons</option>
+        </optgroup>
+        <optgroup label="Temperature">
+            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+        </optgroup>
+        </optgroup>
+
+    </select>
+
+    
 
     <br>
 
