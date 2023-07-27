@@ -26,7 +26,8 @@
         imperial_convert_L2G: 'gallon(s)',
         imperial_convert_C2F: 'Fahrenheit',
     // conserions slang for metric to imperial
-        metric_convert_I2C: 'centimeter(s)',
+        // metric_convert_I2C: 'centimeter(s)',
+        inchesToCentimeters: 'centimeter(s)',
         metric_convert_F2M: 'meter(s)',
         metric_convert_M2K: 'kilometer(s)',
         metric_convert_O2G: 'gram(s)',
@@ -70,7 +71,7 @@ const convertButton_M2I = document.getElementById('convertButton-M2I');
                     result_M2I = inputValue_M2I * poundsToKilograms;
                     break;
                 case 'fluidOuncesToMilliliters' :
-                    result = inputValue_M2I * fluidOuncesToMilliliters;
+                    result_M2I = inputValue_M2I * fluidOuncesToMilliliters;
                     break;
                 case 'gallonsToLiters' :
                     result_M2I = inputValue_M2I * gallonsToLiters;
@@ -89,10 +90,10 @@ const convertButton_M2I = document.getElementById('convertButton-M2I');
         // Displaying results 
         if (typeof result_M2I !== 'number') {
             // handle case where the conversion type is not recongized
-            document.getElementById('result-M2I').textContent = result_M2I;
+            document.getElementById('result-M2I').textContent = `${result_M2I} ${slangTerms[metricConversion]}`;
         } else {
             // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
-            document.getElementById('result-M2I').textContent = result_M2I.toFixed(2);
+            document.getElementById('result-M2I').textContent = `${result_M2I.toFixed(2)} ${slangTerms[metricConversion]}`;
         };
     
     });
