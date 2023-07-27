@@ -17,24 +17,23 @@
     // Slang terms used for conversions
     const slangTerms = {
     // conserion slang for imperial to metric
-        imperial_convert_C2I: 'inch(es)',
-        imperial_convert_M2F: 'feet',
-        imperial_convert_K2M: 'mile(s)',
-        imperial_convert_G2O: 'ounce(s',
-        imperial_convert_K2P: 'pound(s)',
-        imperial_convert_M2FO: 'fluid ounce(s)',
-        imperial_convert_L2G: 'gallon(s)',
-        imperial_convert_C2F: 'Fahrenheit',
+        centimetersToinches: 'inch(es)',
+        metersToFeet: 'feet',
+        kilometersToMiles: 'mile(s)',
+        gramsToOunces: 'ounce(s',
+        kilogramsToPounds: 'pound(s)',
+        millilitersToFluidOunces: 'fluid ounce(s)',
+        litersToGallons: 'gallon(s)',
+        celsiusToFahrenheit: 'Fahrenheit',
     // conserions slang for metric to imperial
-        // metric_convert_I2C: 'centimeter(s)',
         inchesToCentimeters: 'centimeter(s)',
-        metric_convert_F2M: 'meter(s)',
-        metric_convert_M2K: 'kilometer(s)',
-        metric_convert_O2G: 'gram(s)',
-        metric_convert_P2K: 'kilogram(s)',
-        metric_convert_FO2M: 'milliliter(s)',
-        metric_convert_G2L: 'liter(s)',
-        metric_convert_F2C: 'Celcius'
+        feetToMeters: 'meter(s)',
+        milesToKilometers: 'kilometer(s)',
+        ouncesToGrams: 'gram(s)',
+        poundsToKilograms: 'kilogram(s)',
+        fluidOuncesToMilliliters: 'milliliter(s)',
+        gallonsToLiters: 'liter(s)',
+        fahrenheitToCelsius: 'Celcius'
     } 
     
 
@@ -151,10 +150,10 @@ const convertButton_I2M = document.getElementById('convertButton-I2M');
         // Displaying results
         if (typeof result_I2M !== 'number') {
             // handle case where the conversion type is not recongized
-            document.getElementById('result-I2M').textContent = result_I2M;
+            document.getElementById('result-I2M').textContent = `${result_I2M} ${slangTerms[imperialConversion]}`;
         } else {
             // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
-            document.getElementById('result-I2M').textContent = result_I2M.toFixed(2);
+            document.getElementById('result-I2M').textContent = `${result_I2M.toFixed(2)} ${slangTerms[imperialConversion]}`;
         }
 
     });
