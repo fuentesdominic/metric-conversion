@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,90 +8,94 @@
     <link rel="stylesheet" href="style.css">
     <title>Unlocking the Metric World!</title>
 </head>
+
 <body>
     <div class="entirePage-div">
-    <h1 class="title">Unlocking the Metric System!</h1>
+        <h1 class="title">Unlocking the Metric System!</h1>
 
-    <h3 class="description">The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly converts units between metric and imperial measurements. Enter values in the metric system and get instant conversions in the imperial system, or vice versa. Simple and convenient!</h3>
-    
-    <div class="conversion-container">
+        <h3 class="description">The Metric to Imperial Converter is a user-friendly JavaScript web app that effortlessly
+            converts units between metric and imperial measurements. Enter values in the metric system and get instant
+            conversions in the imperial system, or vice versa. Simple and convenient!</h3>
 
-    <div class="metricConversion-div">
-    <div class="info-container-M2I">
-    <label for="metricConversion">Metric to Imperial Conversion:</label>
-    <select id="metricConversion">
-                <option selected disabled>Select</option>
+        <div class="conversion-container">
 
-            <optgroup label="Metric to Imperial">
-            <optgroup label="Length">
-                <option value="inchesToCentimeters">Inches To Centimeters</option>
-                <option value="feetToMeters">Feet To Meters</option>
-                <option value="milesToKilometers">Miles To Kilometers</option>
-            </optgroup>
-            <optgroup label="Weight">
-                <option value="ouncesToGrams">Ounces To Grams</option>
-                <option value="poundsToKilograms">Pounds To Kilograms</option>
-            </optgroup>
-            <optgroup label="Volume">
-                <option value="fluidOuncesToMilliliters">Fluid Ounces To Milliliters</option>
-                <option value="gallonsToLiters">Gallons To Liters</option>
-            </optgroup>
-            <optgroup label="Temperature">
-                <option value="fahrenheitToCelsius">Fahrenheit To Celsius</option>
-        </optgroup>
-        </optgroup>
+            <div class="metricConversion-div">
+                <div class="info-container-M2I">
+                    <label for="metricConversion">Metric to Imperial Conversion:</label>
+                    <select id="metricConversion">
+                        <option selected disabled>Select</option>
 
-    </select>
-    </div>
+                        <optgroup label="Metric to Imperial">
+                        <optgroup label="Length">
+                            <option value="inchesToCentimeters">Inches To Centimeters</option>
+                            <option value="feetToMeters">Feet To Meters</option>
+                            <option value="milesToKilometers">Miles To Kilometers</option>
+                        </optgroup>
+                        <optgroup label="Weight">
+                            <option value="ouncesToGrams">Ounces To Grams</option>
+                            <option value="poundsToKilograms">Pounds To Kilograms</option>
+                        </optgroup>
+                        <optgroup label="Volume">
+                            <option value="fluidOuncesToMilliliters">Fluid Ounces To Milliliters</option>
+                            <option value="gallonsToLiters">Gallons To Liters</option>
+                        </optgroup>
+                        <optgroup label="Temperature">
+                            <option value="fahrenheitToCelsius">Fahrenheit To Celsius</option>
+                        </optgroup>
+                        </optgroup>
 
-    <div class="info-container-M2I">
-    <label for="inputValue-M2I">Enter Value:</label>
-    <input type="number" id="inputValue-M2I" placeholder="Enter the value">
-    </div>
+                    </select>
+                </div>
 
-    <button id="convertButton-M2I">Convert</button>
+                <div class="info-container-M2I">
+                    <label for="inputValue-M2I">Enter Value:</label>
+                    <input type="number" id="inputValue-M2I" placeholder="Enter the value">
+                </div>
 
-    <p id="result-M2I"></p>
-    </div>
+                <button id="convertButton-M2I">Convert</button>
 
-    <div class="imperialConversion-div">
-    <div class="info-container-I2M">
-    <label for="imperialConversion">Imperial to Metirc Conversion:</label>
-    <select id="imperialConversion">
-            <option selected disabled>Select</option>
+                <p id="result-M2I"></p>
+            </div>
 
-        <optgroup label="Imperial To Metric">
-        <optgroup label="Length">
-            <option value="centimetersToinches">Centimeters To Feet</option>
-            <option value="metersToFeet">Meters To Feet</option>
-            <option value="kilometersToMiles">Kilometers To Miles</option>
-        </optgroup>
-        <optgroup label="Weight">
-            <option value="gramsToOunces">Grams To Ounces</option>
-            <option value="kilogramsToPounds">Kilograms to Pounds</option>
-        </optgroup>
-        <optgroup label="Volume">
-            <option value="millilitersToFluidOunces">Milliliters to Fluid Ounces</option>
-            <option value="litersToGallons">Liters to Gallons</option>
-        </optgroup>
-        <optgroup label="Temperature">
-            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
-        </optgroup>
-        </optgroup>
+            <div class="imperialConversion-div">
+                <div class="info-container-I2M">
+                    <label for="imperialConversion">Imperial to Metirc Conversion:</label>
+                    <select id="imperialConversion">
+                        <option selected disabled>Select</option>
 
-    </select>
-    </div>
+                        <optgroup label="Imperial To Metric">
+                        <optgroup label="Length">
+                            <option value="centimetersToinches">Centimeters To Feet</option>
+                            <option value="metersToFeet">Meters To Feet</option>
+                            <option value="kilometersToMiles">Kilometers To Miles</option>
+                        </optgroup>
+                        <optgroup label="Weight">
+                            <option value="gramsToOunces">Grams To Ounces</option>
+                            <option value="kilogramsToPounds">Kilograms to Pounds</option>
+                        </optgroup>
+                        <optgroup label="Volume">
+                            <option value="millilitersToFluidOunces">Milliliters to Fluid Ounces</option>
+                            <option value="litersToGallons">Liters to Gallons</option>
+                        </optgroup>
+                        <optgroup label="Temperature">
+                            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+                        </optgroup>
+                        </optgroup>
 
-    <div class="info-container-I2M">
-    <label for="inputValue-I2M">Enter Value:</label>
-    <input type="number" id="inputValue-I2M" placeholder="Enter the value">
-    </div>
-    
-    <button id="convertButton-I2M">Convert</button>
+                    </select>
+                </div>
 
-    <p id="result-I2M"></p>
-    </div>
-    </div>
+                <div class="info-container-I2M">
+                    <label for="inputValue-I2M">Enter Value:</label>
+                    <input type="number" id="inputValue-I2M" placeholder="Enter the value">
+                </div>
+
+                <button id="convertButton-I2M">Convert</button>
+
+                <p id="result-I2M"></p>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
