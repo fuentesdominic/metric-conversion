@@ -13,6 +13,28 @@
 
     // Temperature Conversions
     const fahrenheitToCelsius = (fahrenheit) => (fahrenheit - 32) * (5 / 9);
+
+    // Slang terms used for conversions
+    const slangTerms = {
+    // conserion slang for imperial to metric
+        imperial_convert_C2I: 'inch(es)',
+        imperial_convert_M2F: 'feet',
+        imperial_convert_K2M: 'mile(s)',
+        imperial_convert_G2O: 'ounce(s',
+        imperial_convert_K2P: 'pound(s)',
+        imperial_convert_M2FO: 'fluid ounce(s)',
+        imperial_convert_L2G: 'gallon(s)',
+        imperial_convert_C2F: 'Fahrenheit',
+    // conserions slang for metric to imperial
+        metric_convert_I2C: 'centimeter(s)',
+        metric_convert_F2M: 'meter(s)',
+        metric_convert_M2K: 'kilometer(s)',
+        metric_convert_O2G: 'gram(s)',
+        metric_convert_P2K: 'kilogram(s)',
+        metric_convert_FO2M: 'milliliter(s)',
+        metric_convert_G2L: 'liter(s)',
+        metric_convert_F2C: 'Celcius'
+    } 
     
 
 // setting up callback function for button
