@@ -97,7 +97,7 @@ body {
     transform: scale(1.1);
 }
 
-@media only screen and (max-width: 440px){
+@media only screen and (min-width: 300px){
     .conversion-container {
         padding-bottom: 250px;
     }
