@@ -36,8 +36,6 @@ body {
 .conversion-container {
     display: flex;
     justify-content: space-around;
-    /* padding-bottom: 16rem; */
-    margin-bottom: 16rem;
 }
 
 /* stlying for metric to imperial */
@@ -62,6 +60,7 @@ body {
     background-color: #4CAF50;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 3rem;
 }
 
 #convertButton-M2I:hover {
@@ -92,6 +91,7 @@ body {
     background-color: #4CAF50;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 3rem;
 }
 
 #convertButton-I2M:hover {
