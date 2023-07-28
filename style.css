@@ -9,6 +9,10 @@
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow: hidden;
     margin: 0;
@@ -20,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    margin: 2rem;
+    margin: 1.5rem;
     text-decoration: underline;
     font-size: 36px;
 }
@@ -29,13 +33,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     font-size: 20px;
+}
+
+#result-M2I, #result-I2M {
+    margin-bottom: 10px;
 }
 
 .conversion-container {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 /* stlying for metric to imperial */
@@ -53,20 +63,21 @@ body {
 }
 
 #convertButton-M2I {
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
     background-color: #4CAF50;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 3rem;
 }
 
 #convertButton-M2I:hover {
     background-color: #388E3C;
     transform: scale(1.1);
 }
+
+
 
 /* styling for imperial to metric */
 .imperialConversion-div {
@@ -84,23 +95,16 @@ body {
 }
 
 #convertButton-I2M {
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     border: none;
     border-radius: 10px;
     color: #FFFFFF;
     background-color: #4CAF50;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 3rem;
 }
 
 #convertButton-I2M:hover {
     background-color: #388E3C;
     transform: scale(1.1);
 }
-
-/* @media only screen and (min-width: 700px){
-    .description {
-        margin-bottom: 3rem;
-    }
-} */
