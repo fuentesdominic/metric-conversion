@@ -33,7 +33,9 @@ const slangTerms = {
     poundsToKilograms: 'kilogram(s)',
     fluidOuncesToMilliliters: 'milliliter(s)',
     gallonsToLiters: 'liter(s)',
-    fahrenheitToCelsius: 'Celcius'
+    fahrenheitToCelsius: 'Celcius',
+// Fix NaN being displayed when user enters something triggering error
+    // conversion_error: 'Invalid Conversion Type'
 }
 
 
