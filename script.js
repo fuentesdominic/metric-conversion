@@ -81,7 +81,7 @@ convertButton_M2I.addEventListener('click', () => {
                 result_M2I = fahrenheitToCelsius(inputValue_M2I);
                 break;
             default:
-                result_M2I = 'Invalid Conversion Type';
+                result_M2I = '';
                 break;
         }
     } else {
@@ -94,9 +94,15 @@ convertButton_M2I.addEventListener('click', () => {
         document.getElementById('result-M2I').textContent = `${result_M2I} ${slangTerms[metricConversion]}`;
     } else {
         // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
-        document.getElementById('result-M2I').textContent = `${result_M2I.toFixed(2)} ${slangTerms[metricConversion]}`;
-    };
+        const formattedResult =result_M2I.toFixed(2);
 
+        if (metricConversion in slangTerms) {
+            document.getElementById('result-M2I').textContent = `${formattedResult} ${slangTerms[metricConversion]}`;
+
+        } else {
+        document.getElementById('result-M2I').textContent = 'Enter Valid Value';
+        }
+    }
 });
 
 
