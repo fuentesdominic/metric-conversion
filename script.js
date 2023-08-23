@@ -50,8 +50,11 @@ convertButton_M2I.addEventListener('click', () => {
     // Allows us to preform mathematical calculations correctly  
     const inputValue_M2I = parseFloat(document.getElementById('inputValue-M2I').value);
 
+    const error_message_M2I = 'Enter A Value';
+
     // Stores the converted value from the user input
     let result_M2I;
+    // let error_message_M2I;
 
     // Logic for conversion direction
     if (metricConversion) {
@@ -88,22 +91,50 @@ convertButton_M2I.addEventListener('click', () => {
         result_M2I = 'Conversion Error';
     };
 
-    // Displaying results 
-    if (typeof result_M2I !== 'number') {
-        // handle case where the conversion type is not recongized
-        document.getElementById('result-M2I').textContent = `${result_M2I} ${slangTerms[metricConversion]}`;
+//     // Displaying results 
+//     if (typeof result_M2I !== 'number') {
+//         // handle case where the conversion type is not recongized
+//         document.getElementById('result-M2I').textContent = `${result_M2I} ${slangTerms[metricConversion]}`;
+//     } else {
+//         // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
+//         const formattedResult =result_M2I.toFixed(2);
+
+//         if (metricConversion[slangTerms]) {
+//             document.getElementById('result-M2I').textContent = `${result_M2I} ${slangTerms[metricConversion]}`;
+
+//         } else {
+//         document.getElementById('result-M2I').textContent = 'Enter Valid Value';
+//         }
+//     }}
+// );
+
+// Checks if user make invalid value
+if(isNaN(result_M2I)) {
+    // Gives error message
+    document.getElementById('error-message-M2I').textContent = (error_message_M2I);
+    return;
+} else {
+    // Gets rid of error message
+    document.getElementById('error-message-M2I').textContent = ''
+};
+
+// Displaying results
+if (typeof result_M2I !== 'number') {
+    // Handle case where the conversion type is not recognized or result is not a number
+    document.getElementById('result-M2I').textContent = result_M2I; // Display the error message
+} else {
+    // Convert the result to a string with two decimal places
+    const formattedResult = result_M2I.toFixed(2);
+
+    if (slangTerms.hasOwnProperty(metricConversion)) {
+        // Display the formatted result along with the appropriate conversion term
+        document.getElementById('result-M2I').textContent = `${formattedResult} ${slangTerms[metricConversion]}`;
     } else {
-        // Using toFixed displays the result with decimal places to only two, e.g. "10.88"
-        const formattedResult =result_M2I.toFixed(2);
-
-        if (metricConversion in slangTerms) {
-            document.getElementById('result-M2I').textContent = `${formattedResult} ${slangTerms[metricConversion]}`;
-
-        } else {
-        document.getElementById('result-M2I').textContent = 'Enter Valid Value';
-        }
+        // Handle case where the conversion type is recognized but slang term is missing
+        document.getElementById('result-M2I').textContent = 'Invalid Conversion Term';
     }
-});
+}});
+
 
 
 // setting up callback function for button
